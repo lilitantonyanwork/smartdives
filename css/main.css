@@ -10,6 +10,12 @@ img{
 p, ul, h1,h2,h3,h4{
     margin: 0;
     padding: 0;
+    color: #14191CD9;
+}
+p{
+    font-size: 17px;
+    color: #14191CD9;
+    line-height: 24px;
 }
 a{
     text-decoration: none;
@@ -55,6 +61,7 @@ header{
     box-sizing: border-box;
     background:#F0F1F6;
     padding: 40px 0;
+    z-index: 999;
 }
 
 .menu{
@@ -200,6 +207,7 @@ section {
     padding-top: 30px;
     padding-right: 60px;
     box-sizing: border-box;
+    height: 100%;
 }
 
 .products{
@@ -351,6 +359,7 @@ section {
     background-position: bottom right;
     padding-right: 120px;
     padding-top: 56px;
+    height: 100%;
 }
 
 .blog h1{
@@ -359,5 +368,109 @@ section {
     line-height: 104px;
     max-width: 700px;
     width: 100%;
-    margin-bottom: 52px;
+    margin-bottom: 80px;
+}
+.blog__list{
+    gap: 32px;
+}
+
+.blog__item h2{
+    color: #0095D5;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+
+.blog__item li{
+    font-size: 17px;
+    line-height: 24px;
+    list-style-type: disc;
+    color: #14191CD9;
+}
+.blog__item ul{
+    padding-left: 20px;
+}
+.blog__item{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.contact{
+    background: url('../images/bg4.svg') no-repeat;
+    background-position: bottom right;
+    padding-bottom: 252px;
+    padding-right: 120px;
+}
+
+.contact p{
+    max-width: 544px;
+    width: 100% ;
+    margin-bottom: 80px;
+}
+
+.contact h1{
+    font-size: 96px;
+    line-height: 104px;
+    margin-bottom: 32px;
+}
+
+.contact__info{
+
+    gap:32px;
+}
+
+.contact__left, .contact__right{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.contact__left li{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    gap: 8px;
+}
+.contact__left li span{
+    font-size: 40px;
+    color: #0095D5;
+    line-height: 48px;
+}
+
+
+.contact__right form{
+    width: 100%;
+}
+
+.contact__right input{
+    width: 100%;
+    background: #C1CAD6;
+    border-radius: 8px;
+    padding: 0 12px;
+    height: 52px;
+    margin-bottom: 24px;
+    border: none;
+    box-sizing: border-box;
+}
+.contact__right .form__row{
+    gap: 24px;
+}
+
+textarea{
+    background: #C1CAD6;
+    border-radius: 8px;
+    padding: 14px 12px;
+    height: 210px;
+    width: 100%;
+    margin-bottom: 24px;
+    border: none;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.slick-vertical .slick-slide{
+    height: 100vh;
+}
+
+main .slick-track{
+    display: flex!important;
+    flex-direction: column;
 }
