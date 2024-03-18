@@ -15,4 +15,11 @@ $(function (){
             }
         }
     });
+
+    $('.menu').on('click', function (){
+        $('.main__menu').toggleClass('show')
+    })
+    $('.menu__close').on('click', function (){
+        $('.main__menu').removeClass('show')
+    })
 })
