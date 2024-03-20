@@ -496,7 +496,9 @@ textarea{
     height: 100vh;
 }
 
-
+.product__img .slick-list{
+    margin-bottom: 56px;
+}
 .main__menu{
     display: none;
     top: 0;
