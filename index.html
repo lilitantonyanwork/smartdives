@@ -2,15 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
     <title>Title</title>
-    <link rel="stylesheet" href="css/jquery.pagepiling.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <header class="df f-column j-sp-btw a-center">
    <div class="header__top">
        <div class="menu"></div>
+       <div class="menu__logo dn"> <a href=""><img src="images/logo.svg" alt=""></a></div>
        <div class="search"></div>
    </div>
     <div class="header__middle">
@@ -38,24 +45,30 @@
             <li><a href="blog.html">Blog</a></li>
         </ul>
     </div>
+    <div class="search__menu">
+        <div class="menu__close"></div>
+        <input type="text" placeholder="Поиск">
+    </div>
 </header>
 <main >
 
 
-
-    <div id="pagepiling">
-        <div class="section">
                 <section class="pr ">
                     <div class="logo df j-sp-btw">
                         <a href=""><img src="images/logo.svg" alt=""></a>
-                        <button class="btn catalog__btn">Our products</button>
+                        <button class="btn catalog__btn a-center"><img src="images/icons/List.svg" alt="">Our products</button>
                     </div>
                     <div class="banner df ">
                         <div class="banner__left">
                             <h1>Dive Safe</h1>
                             <h1> Dive Smart!</h1>
                             <p>Smart Dives envisions to take marine and diving companies to the next level, by providing them with advanced and sophisticated technology and diving equipments.</p>
+                            <button class="btn catalog__btn a-center dn"><img src="images/icons/List-white.svg" alt="">Our products</button>
                             <button class="btn btn__red">↓ Scroll to see more ↓</button>
+                            <div class="partner__logo dn">
+                                <img src="images/logo1.svg" alt="">
+                                <img src="images/logo2.svg" alt="">
+                            </div>
                         </div>
                         <div class="banner__right df f-column">
                             <img src="images/banner.png" alt="">
@@ -65,9 +78,18 @@
                             </div>
                         </div>
                     </div>
+                    <div class="mob__social dn">
+                        <p>Our social networks</p>
+                        <ul class="social__icons df f-column">
+                            <li class="inst"><a href=""></a></li>
+                            <li class="ln"><a href=""></a></li>
+                            <li class="tw"><a href=""></a></li>
+                            <li class="fb"><a href=""></a></li>
+                        </ul>
+                    </div>
+
                 </section>
-        </div>
-        <div class="section">
+
                 <section class="products">
                     <h2 class="product__title">
                         More than <span>30 different products</span>
@@ -149,27 +171,31 @@
                         <span>[16]</span>
                     </div>
                 </section>
-        </div>
-        <div class="section">
+
                 <section class="service">
                     <h1> Comprehensive diving services</h1>
                     <div class="service__list df j-sp-btw">
                         <div class="service__item">
                             <img src="images/service1.png" alt="">
                             <h2>Design and custom building</h2>
-                            <p>Smart Dives LLC designs and builds specialized diving equipment such as Containerized Deck Decompression Chamber, Containerized Machinery Room, Containerized Diving Control Room, Scuba Replacement Package, Portable Diving Panels, Launch and Recovery System & etc... </p>
-                            <p>Our designs are carefully engineered. An outcome of technical and analitical study to develop new innovations.</p>
+                            <p>Smart Dives LLC designs and builds specialized diving equipment such as Containerized Deck Decompression Chamber, Containerized Machinery Room, Containerized Diving Control Room, Scuba Replacement Package, Portable Diving Panels, Launch and Recovery System & etc... <br>
+                           Our designs are carefully engineered. An outcome of technical and analitical study to develop new innovations.</p>
                         </div>
                             <div class="service__item">
                                 <img src="images/service2.png" alt="">
                                 <h2>Maintenance & Repair</h2>
                                 <p>We offer maintenance and repair services of diving equipments, Compressors, Power Packs, Underwater Cameras, Underwater Lights, Hydraulic tools, etc... Our technical team consists of experienced and trained Mechanical Technicians, Electrical Technicians & Welders who have extensive knowledge in maintenance and repair of diving equipments, underwater tools & machineries.</p>
                                </div>
+                        <div class="service__item dn">
+                            <img src="images/service2.png" alt="">
+                            <h2>Maintenance & Repair</h2>
+                            <p>We offer maintenance and repair services of diving equipments, Compressors, Power Packs, Underwater Cameras, Underwater Lights, Hydraulic tools, etc... Our technical team consists of experienced and trained Mechanical Technicians, Electrical Technicians & Welders who have extensive knowledge in maintenance and repair of diving equipments, underwater tools & machineries.</p>
                         </div>
+                    </div>
+
 
                 </section>
-        </div>
-        <div class="section">
+
                 <section class="blog ">
                     <h1>Blogs</h1>
                     <div class="blog__list df">
@@ -204,9 +230,9 @@
                             </div>
                         </div>
                     </div>
+                    <a href="" class="btn btn__red">View all posts</a>
                 </section>
-        </div>
-        <div class="section">
+
                 <section class="contact">
                     <h1>Contact us</h1>
                     <p>If you have questions or want to discuss cooperation, write, call or request a call back, and we will tell you everything ourselves</p>
@@ -248,12 +274,10 @@
                         </div>
                     </div>
                 </section>
-        </div>
-    </div>
+
 </main>
-<footer></footer>
+
 <script src="js/jquery-3.7.1.min.js"></script>
-<script src="js/jquery.pagepiling.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
