@@ -377,6 +377,7 @@ section {
 .blog{
     background: url('../images/bg3.svg') no-repeat;
     background-position: bottom left;
+    background-size: cover ;
     padding-right: 120px;
     padding-top: 56px;
     height: 100%;
@@ -495,10 +496,7 @@ textarea{
     height: 100vh;
 }
 
-main .slick-track{
-    display: flex!important;
-    flex-direction: column;
-}
+
 .main__menu{
     display: none;
     top: 0;
@@ -946,6 +944,7 @@ main .slick-track{
     display: flex;
     flex-direction: column;
     gap: 32px;
+    width: 544px;
 }
 .overview{
     padding: 56px 120px 56px 200px;
@@ -1376,4 +1375,76 @@ main .slick-track{
         background: #fff;
     }
 
+    .banner__left{
+        margin-top: 40px;
+    }
+    .products{
+        padding: 24px;
+    }
+
+    .products h2{
+        font-size: 40px;
+        line-height: 48px;
+        margin-top: 0;
+    }
+    .counter__item p span{
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .counter__item p{
+        margin-bottom: 0;
+        font-size: 14px ;
+    }
+    .products {
+        padding: 24px;
+        overflow: hidden;
+    }
+    .products .tags{
+
+        width: 100%;
+        overflow-x: auto;
+    }
+    .tags ul{
+        width: 100%;
+        display:flex;
+        flex-wrap: nowrap;
+        min-width: 1200px;
+    }
+    .service{
+        padding: 24px;
+    }
+
+    .service h1{
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 24px;
+    }
+    .service__item h2{
+        font-weight: 400;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    .blog{
+        padding: 24px;
+    }
+    .blog__list{
+        flex-wrap: wrap;
+    }
+    .blog__item{
+        width: 100%;
+        flex-basis: unset;
+    }
+    .contact{
+        padding: 24px;
+    }
+    .contact h1{
+        font-size: 48px;
+        line-height: 56px;
+    }
+    .contact p{
+        margin-bottom: 24px;
+    }
+    .contact__info{
+        flex-direction: column;
+    }
 }

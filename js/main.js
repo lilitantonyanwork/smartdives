@@ -10,5 +10,6 @@ $(function (){
     $('.menu__close').on('click', function (){
         $('.main__menu').removeClass('show')
         $('.search__menu').removeClass('show')
-    })
+    });
+    $('.product__img').slick();
 })
