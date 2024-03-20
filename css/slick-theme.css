@@ -71,7 +71,7 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: 0;
     bottom: -25px;
     top: auto;
     background: url('../images/icons/arrow-left.svg');
