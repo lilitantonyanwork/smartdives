@@ -1841,6 +1841,12 @@ header::-webkit-scrollbar {
         background-size: 100%;
         background-position: bottom;
     }
+    .btn__red{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 @media  screen and (max-width: 480px) {
