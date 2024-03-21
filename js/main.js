@@ -12,4 +12,11 @@ $(function (){
         $('.search__menu').removeClass('show')
     });
     $('.product__img').slick();
+    // $('.product__carousel').slick({
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    //     centerMode: true,
+    //     infinite: false
+    // });
+
 })

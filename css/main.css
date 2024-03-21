@@ -319,8 +319,12 @@ section {
 .carousel__item img{
     margin-bottom: 24px;
 }
+.banner__left .catalog__btn{
+    display: none;
+}
 .product__carousel{
     gap: 32px;
+    width: 100%;
 }
 .carousel__item .btn{
     width: 100%;
@@ -979,6 +983,9 @@ textarea{
 .overview .product__item{
     background: #fff;
     margin-bottom: 32px;
+}
+.product__carousel .slick-track{
+    display: flex;
 }
 @media screen and (max-width: 1280px){
     .logo{
