@@ -1797,6 +1797,31 @@ textarea{
         right: -15px;
     }
 
+    .home{
+        background: url('../images/mob-bg1.svg') no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+    }
+    .products{
+        background: url('../images/mob-bg2.svg') no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+    }
+    .service{
+        background: url('../images/mob-bg3.svg') no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+    }
+    .blog{
+        background: url('../images/mob-bg4.svg') no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+    }
+    .contact{
+        background: url('../images/mob-bg4.svg') no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+    }
 }
 
 @media  screen and (max-width: 480px) {
