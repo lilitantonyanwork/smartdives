@@ -1,5 +1,11 @@
 $(function (){
-
+    $('.tag__item ').click(function(){
+        $('.tag__item').removeClass('tag__item--active');
+        $(this).addClass('tag__item--active');
+        var tagid = $(this).data('tag');
+        $('.tab__content').removeClass('active').addClass('hide');
+        $('#'+tagid).addClass('active').removeClass('hide');
+    });
 
     $('.menu').on('click', function (){
         $('.main__menu').toggleClass('show')
@@ -22,6 +28,11 @@ $(function (){
         $('.service__list').slick({
             arrows: false
         });
+        $('.product__carousel').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            arrows:false
+            })
     }
     $(window).on('resize', function (){
         if($(window).width() <=600){

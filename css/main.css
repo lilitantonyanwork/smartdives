@@ -167,6 +167,8 @@ main{
     height: 52px;
     color: #fff;
     padding: 14px 32px;
+    z-index: 2;
+    position: relative;
 }
 
 .catalog__btn{
@@ -180,6 +182,24 @@ main{
     padding-right: 119px;
     box-sizing: border-box;
     margin-bottom: 82px;
+}
+
+.line1{
+    left: 390px;
+    max-height: 100vh;
+    pointer-events: none;
+    position: absolute;
+    top:0;
+    z-index: 1;
+}
+
+.line2{
+    right: 270px;
+    max-height: 100vh;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    z-index: 1;
 }
 
 .banner h1{
@@ -272,6 +292,15 @@ section {
 
 }
 
+.home{
+    overflow: hidden;
+}
+.hide{
+    display: none;
+}
+.active{
+    display: block;
+}
 .counter__item p{
     display: flex;
     flex-direction: column;
@@ -976,6 +1005,7 @@ textarea{
 
 .overview ul li.tag__item{
     list-style: none;
+    cursor: pointer;
 }
 .overview .tags ul{
     padding-left: 0;
