@@ -7,6 +7,12 @@ $(function (){
         $('#'+tagid).addClass('active').removeClass('hide');
     });
 
+    $('.scroll__to').on('click', function (){
+        $('html, body').animate({
+            scrollTop: $(".products").offset().top
+        }, 2000);
+    })
+
     $('.menu').on('click', function (){
         $('.main__menu').toggleClass('show')
     })
@@ -18,21 +24,55 @@ $(function (){
         $('.search__menu').removeClass('show')
     });
     $('.product__img').slick();
-    // $('.product__carousel').slick({
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     centerMode: true,
-    //     infinite: false
-    // });
+
+    var $slider = $('.product__carousel');
+    var $progressBar = $('.slider__paging');
+    var $progressBarLabel = $( '.slider__label' );
+
+    $slider.on('afterChange', function(event, slick, currentSlide, nextSlide) {
+        console.log('aaaa')
+        var currentDot = $(".slick-dots .slick-active").index() + 1;
+        var dots = $slider.find('.slick-dots li').length;
+
+
+        var calcs = (currentDot/dots) * 100;
+
+        $progressBar
+            .css('background-size', calcs - 5 + '% 100%')
+            .attr('aria-valuenow', calcs - 10 );
+
+        $('.slider__arrow').css('left',calcs -10  + '%' );
+
+        if($(window).width()<600){
+            $('.slider__arrow').css('left',calcs-8  + '%' );
+        }
+
+        $progressBarLabel.text( calcs + '% completed' );
+    });
+    $('.product__carousel').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        arrows:false,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            },
+
+        ]
+    });
     if($(window).width() <=600){
         $('.service__list').slick({
             arrows: false
         });
-        $('.product__carousel').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            arrows:false
-            })
+
     }
     $(window).on('resize', function (){
         if($(window).width() <=600){

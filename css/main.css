@@ -74,6 +74,7 @@ header{
     background:#F0F1F6;
     padding: 40px 0;
     z-index: 999;
+    border-right: 1px solid #c1cad6;
 }
 
 .menu{
@@ -161,6 +162,7 @@ main{
     font-size: 17px;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
+    z-index: 2;
 }
 .btn__red{
     background: #ED1C24;
@@ -252,7 +254,7 @@ section {
     padding-top: 56px;
     color: #14191CD9;
     background: url('../images/bg1.svg') no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
 .products h2{
     font-size: 48px;
@@ -329,8 +331,12 @@ section {
     margin-bottom: 32px;
 }
 
+.products .slick-list{
+    padding: 0!important;
+}
+
 .carousel__item{
-    width: 100%;
+    width:352px;
     height: 492px;
     border-radius: 24px;
     border-top-left-radius: 0;
@@ -370,9 +376,20 @@ section {
     background: #fff;
 }
 
+.product__carousel .slick-dots{
+    display: none!important;
+    height: 1px;
+    background: #14191C40;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: -42px;
+    width: 90%;
+}
+
 .service{
     background: url('../images/bg2.svg') no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: bottom left;
     padding-right: 120px;
 }
@@ -410,8 +427,8 @@ section {
 
 .blog{
     background: url('../images/bg3.svg') no-repeat;
-    background-position: bottom left;
-    background-size: cover ;
+    background-size:contain ;
+    background-position: right bottom;
     padding-right: 120px;
     padding-top: 56px;
     height: 100%;
@@ -427,7 +444,15 @@ section {
 }
 .blog__list{
     gap: 32px;
+    padding-bottom: 56px;
 }
+.blog__list p{
+    margin-bottom: 24px;
+}
+.blog__list ul{
+    margin-bottom: 24px;
+}
+
 
 .blog__item h2{
     color: #0095D5;
@@ -731,6 +756,18 @@ textarea{
 
 }
 
+ .tags::-webkit-scrollbar-thumb:horizontal {
+    background: transparent;
+    border-radius: 5px;
+}
+/* Define the track style */
+.tags::-webkit-scrollbar {
+    display: none;
+}
+
+.counter::-webkit-scrollbar {
+    display: none;
+}
 .get__contact{
     display: flex;
     flex-direction: column;
@@ -1017,11 +1054,73 @@ textarea{
 }
 .product__carousel .slick-track{
     display: flex;
+    gap: 24px;
 }
 .service .slick-track{
     display: flex;
     gap: 24px;
 }
+.products h2:before{
+    content: '';
+    width: 138px;
+    height: 74px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.slider__paging {
+    display: block;
+    width: 90%;
+    height: 2px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+
+    background-color: #14191C40;
+    background-image: linear-gradient(to right, #59C9A5, #59C9A5) , url("../images/slider.svg");
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: background-size .4s ease-in-out;
+
+}
+
+.slider__progress{
+    position: relative;
+    width: 90%;
+    height: 30px;
+    margin: 0 auto;
+}
+.slider__start{
+    position: absolute;
+    left: -35px;
+    top: -10px;
+}
+.slider__end{
+    position: absolute;
+    top: -10px;
+    right: 0;
+}
+.slider__arrow{
+    background:  url("../images/slider.svg") no-repeat;
+    width: 64px;
+    height: 12px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
 @media screen and (max-width: 1280px){
     .logo{
         padding-right: 0;
@@ -1290,6 +1389,12 @@ textarea{
     .search__menu input{
         max-width: 800px;
     }
+    .line2{
+        right: 160px;
+    }
+    .line1{
+        left: 300px;
+    }
 }
 
 @media screen and (max-width: 1024px){
@@ -1324,15 +1429,25 @@ textarea{
     .search__menu input{
         max-width: 600px;
     }
+    .line2{
+        right: 0;
+    }
 }
 
 @media  screen and (max-width: 990px) {
     .banner__left{
         left: 140px;
     }
+    .line2{
+        display: none;
+    }
+    .line1{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px){
+
     .banner__left{
         position: relative;
         left: 0;
@@ -1417,6 +1532,11 @@ textarea{
     .banner__left .btn__red{
         color: #14191CD9;
         background: #fff;
+
+    }
+    .banner__left .catalog__btn{
+        display: flex;
+
     }
 
     .banner__left{
@@ -1434,10 +1554,20 @@ textarea{
     .counter__item p span{
         font-size: 24px;
         line-height: 32px;
+
+    }
+    .counter__item{
+        min-width: 160px;
     }
     .counter__item p{
         margin-bottom: 0;
         font-size: 14px ;
+        white-space: nowrap;
+    }
+    .counter{
+        overflow-x: auto;
+        gap: 8px;
+        width: 100%;
     }
     .products {
         padding: 24px;
@@ -1649,11 +1779,31 @@ textarea{
     .overview ul{
         padding-right: 0;
     }
+    .banner__left .btn__red{
+        width: 100%;
+
+    }
+    .banner__left .catalog__btn{
+        width: 100%;
+
+    }
+    .slider__arrow{
+        background: url('../images/slider-arrow-mob.svg')no-repeat;
+        width: 19px;
+        left: 23px;
+    }
+
+    .slider__end{
+        right: -15px;
+    }
 
 }
 
 @media  screen and (max-width: 480px) {
     .post__item{
         width: 100%;
+    }
+    .service h1{
+        word-break: break-word;
     }
 }
