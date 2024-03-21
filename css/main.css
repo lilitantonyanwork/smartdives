@@ -683,6 +683,8 @@ textarea{
     overflow: auto;
     height: 100vh;
     position: relative;
+    background: url('../images/bg7.svg') no-repeat;
+    background-size: 100% 100%;
 }
 .title__img{
     position: relative;
@@ -805,7 +807,7 @@ header::-webkit-scrollbar {
 }
 .category{
     padding: 56px 120px 56px 200px;
-    background: url('../images/category-bg.svg') no-repeat;
+    background: url('../images/bg3.svg') no-repeat;
     background-size: cover;
 }
 .post__list{
@@ -818,7 +820,7 @@ header::-webkit-scrollbar {
     margin-bottom: 32px;
 }
 .post{
-    background: url('../images/post-bg.svg') no-repeat;
+    background: url('../images/bg3.svg') no-repeat;
     background-size: cover;
 }
 
