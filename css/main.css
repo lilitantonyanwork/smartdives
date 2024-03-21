@@ -75,6 +75,9 @@ header{
     padding: 40px 0;
     z-index: 999;
     border-right: 1px solid #c1cad6;
+    min-height: 400px;
+    overflow-x: auto;
+    bottom: 0;
 }
 
 .menu{
@@ -766,6 +769,9 @@ textarea{
 }
 
 .counter::-webkit-scrollbar {
+    display: none;
+}
+header::-webkit-scrollbar {
     display: none;
 }
 .get__contact{
@@ -1473,6 +1479,7 @@ textarea{
         position: relative;
         flex-direction: row;
         height: 84px;
+        min-height: 84px;
         width: 100%;
         align-items: center;
         padding: 24px;
