@@ -251,6 +251,8 @@ section {
     padding-right: 60px;
     box-sizing: border-box;
     height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .products{
@@ -430,7 +432,7 @@ section {
 
 .blog{
     background: url('../images/bg3.svg') no-repeat;
-    background-size:contain ;
+    background-size: 100% ;
     background-position: right bottom;
     padding-right: 120px;
     padding-top: 56px;
@@ -479,7 +481,7 @@ section {
 
 .contact{
     background: url('../images/bg4.svg') no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: bottom right;
     padding-bottom: 252px;
     padding-right: 120px;
@@ -581,11 +583,11 @@ textarea{
     top: 0;
     left: 0;
     width: 100%;
+    padding-top: 120px;
     height: 100%;
     z-index: 999999;
     position: fixed;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     background: #fff;
     overflow: auto;
@@ -1126,7 +1128,11 @@ header::-webkit-scrollbar {
     clip: rect(0,0,0,0);
     border: 0;
 }
-
+@media  screen and (max-width: 1440) {
+    .blog{
+        background-size: cover;
+    }
+}
 @media screen and (max-width: 1280px){
     .logo{
         padding-right: 0;
@@ -1401,6 +1407,9 @@ header::-webkit-scrollbar {
     .line1{
         left: 300px;
     }
+    .blog{
+        background-size: cover;
+    }
 }
 
 @media screen and (max-width: 1024px){
@@ -1478,13 +1487,13 @@ header::-webkit-scrollbar {
     header{
         position: relative;
         flex-direction: row;
-        height: 84px;
+        height: 100%;
         min-height: 84px;
         width: 100%;
         align-items: center;
-        padding: 24px;
+        padding: 22px 24px;
         box-sizing: border-box;
-        border: 1px solid #14191C40;
+        border-bottom: 1px solid #14191C40;
         background: #fff;
     }
     .header__middle{
@@ -1496,6 +1505,7 @@ header::-webkit-scrollbar {
     .header__top{
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
     }
     .menu__logo{
@@ -1575,6 +1585,7 @@ header::-webkit-scrollbar {
         overflow-x: auto;
         gap: 8px;
         width: 100%;
+        position: relative;
     }
     .products {
         padding: 24px;
@@ -1584,6 +1595,7 @@ header::-webkit-scrollbar {
 
         width: 100%;
         overflow-x: auto;
+        position: relative;
     }
     .tags ul{
         width: 100%;
