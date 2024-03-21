@@ -343,11 +343,12 @@ section {
 
 .service{
     background: url('../images/bg2.svg') no-repeat;
+    background-size: cover;
     background-position: bottom left;
     padding-right: 120px;
 }
 .service__item{
-    width: 544px;
+    width:48%;
     border-radius: 24px;
     border-top-left-radius: 0;
     border: 1px solid #14191C40;
@@ -1607,6 +1608,14 @@ textarea{
     .title__img:after{
         height: 60px;
     }
+    .overview .tags{
+        width: 100%;
+        overflow-x: auto;
+    }
+    .overview ul{
+        padding-right: 0;
+    }
+
 }
 
 @media  screen and (max-width: 480px) {
