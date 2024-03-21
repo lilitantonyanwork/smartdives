@@ -988,6 +988,10 @@ textarea{
 .product__carousel .slick-track{
     display: flex;
 }
+.service .slick-track{
+    display: flex;
+    gap: 24px;
+}
 @media screen and (max-width: 1280px){
     .logo{
         padding-right: 0;
