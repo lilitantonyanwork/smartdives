@@ -1,4 +1,5 @@
 $(function (){
+
     $('.tag__item ').click(function(){
         $('.tag__item').removeClass('tag__item--active');
         $(this).addClass('tag__item--active');
@@ -82,4 +83,47 @@ $(function (){
         }
     })
 
+
+
+    $('.home').addClass('active');
+    $('.arrow__bottom').on('click', function (){
+        let elem = $('section.active');
+        $('.arrow__top').removeClass('disabled')
+
+        let top = $(elem).outerHeight();
+        $(elem).next('section').addClass('active');
+        $(elem).removeClass('active');
+        let current_top = $(window).scrollTop(); // current page position
+        $(window).scrollTop(current_top + top);
+        let index = $('section.active').index()+1;
+        $('.page__number').text('0' + index);
+        if($('main section').length == index){
+            $(this).addClass('disabled')
+        } else{
+            $(this).removeClass('disabled')
+
+        }
+
+
+    })
+    $('.arrow__top').on('click', function (){
+        let elem = $('section.active');
+
+        $('.arrow__bottom').removeClass('disabled')
+        let top = $(elem).outerHeight();
+        $(elem).prev('section').addClass('active');
+        $(elem).removeClass('active');
+        let current_top = $(window).scrollTop(); // current page position
+        $(window).scrollTop(current_top - top);
+        let index = $('section.active').index()+1;
+        $('.page__number').text('0' + index);
+        if(index == 1){
+            $(this).addClass('disabled')
+        } else{
+            $(this).removeClass('disabled')
+
+        }
+
+
+    })
 })

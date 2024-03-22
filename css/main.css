@@ -873,6 +873,10 @@ header::-webkit-scrollbar {
     margin-bottom: 32px;
     padding-left: 24px;
 }
+header .disabled{
+    opacity: 0.6;
+    pointer-events: none;
+}
 
 .post__content ul li{
     list-style: disc;
