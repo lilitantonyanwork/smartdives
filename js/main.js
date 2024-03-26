@@ -50,25 +50,30 @@ $(function (){
 
         $progressBarLabel.text( calcs + '% completed' );
     });
-    $('.product__carousel').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        arrows:false,
-        dots: true,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            },
+    if( $('.product__carousel .carousel__item').length > 3 ){
 
-        ]
-    });
+        $('.product__carousel').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            arrows:false,
+            dots: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                },
+
+            ]
+        });
+    } else {
+        $('.slider__progress').hide();
+    }
     if($(window).width() <=600){
         $('.service__list').slick({
             arrows: false
