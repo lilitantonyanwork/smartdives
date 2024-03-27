@@ -943,8 +943,14 @@ header .disabled{
 .categories__right .product__item img{
     width: 135px;
     height: auto;
+
 }
 
+.product__item img{
+    border-radius: 10px;
+    width: 135px;
+    height: auto;
+}
 
 .categories__left h4{
     font-size: 24px;
