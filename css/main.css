@@ -352,6 +352,9 @@ section {
     box-sizing: border-box;
     margin-bottom: 32px;
     background: #fff;
+    display: flex!important;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .carousel__item div:first-child{
     height: 311px;
